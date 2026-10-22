@@ -9,6 +9,7 @@ const LINKS = [
   { href: asset("/#introduction"), label: "Home" },
   { href: asset("/#explore"), label: "Explore" },
   { href: asset("/#experience"), label: "Experience" },
+  { href: asset("/contact/"), label: "Contact" },
 ];
 
 export default function Navbar() {

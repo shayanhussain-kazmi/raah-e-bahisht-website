@@ -203,10 +203,10 @@ export default function PrivacyPolicy() {
               <p>
                 Questions about this policy or your data can be sent to{" "}
                 <a
-                  href="mailto:official.rahebahish@gmail.com"
+                  href="mailto:official.raahebahisht@gmail.com"
                   className="text-gold underline underline-offset-4 hover:text-gold-bright"
                 >
-                  official.rahebahish@gmail.com
+                  official.raahebahisht@gmail.com
                 </a>
                 .
               </p>

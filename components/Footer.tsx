@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex gap-6 text-xs text-ivory/50">
           <a href={asset("/privacy/")} className="hover:text-ivory/80">Privacy Policy</a>
           <a href={asset("/terms/")} className="hover:text-ivory/80">Terms</a>
-          <a href="mailto:official.rahebahish@gmail.com" className="hover:text-ivory/80">Contact</a>
+          <a href={asset("/contact/")} className="hover:text-ivory/80">Contact</a>
         </div>
       </div>
     </footer>
