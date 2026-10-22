@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-color: rgba(227, 215, 179, 0.35) transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #05061a;
+  color: #f5f1e6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Thin gold hairline — echoes the cardBorder used throughout the app */
+.hairline {
+  border: 1px solid rgba(227, 215, 179, 0.18);
+}
+
+.hairline-b {
+  border-bottom: 1px solid rgba(227, 215, 179, 0.14);
+}
+
+/* Subtle repeating geometric motif, mirroring GeometricPattern in HomeScreen.js */
+.geo-motif {
+  background-image: radial-gradient(rgba(227, 215, 179, 0.5) 0.5px, transparent 0.5px);
+  background-size: 22px 22px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Fluid, editorial type scale — the site's primary hierarchy device.
+   Sizes read huge on desktop and settle gracefully on small phones
+   without separate breakpoint overrides everywhere. */
+.text-hero {
+  font-size: clamp(3.1rem, 3.6vw + 2.1rem, 6.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+
+.text-display {
+  font-size: clamp(2.4rem, 2.1vw + 1.7rem, 4rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+}
+
+.text-heading {
+  font-size: clamp(1.9rem, 1.1vw + 1.5rem, 2.6rem);
+  line-height: 1.1;
+}
+
+.text-lede {
+  font-size: clamp(1.05rem, 0.3vw + 0.95rem, 1.3rem);
+  line-height: 1.65;
+}
+
+/* Slow ambient float for decorative/background phone layers. */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.container-page {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+::selection {
+  background: rgba(227, 215, 179, 0.3);
+  color: #f5f1e6;
+}
+
+:focus-visible {
+  outline: 2px solid #e3d7b3;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
